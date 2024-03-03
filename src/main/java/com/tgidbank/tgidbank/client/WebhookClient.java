@@ -5,15 +5,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class WebhookClient {
 
-	public void sendNotificationCompanya(String message) {
-        //  notificação para a Empresa
-        System.out.println("Notificação enviada para Empresa: " + message);
-    }
-
     public void sendNotificationCompany(String message) {
-        // notificação para o Cliente
-        System.out.println("Notificação enviada para Cliente: " + message);
+        System.out.println("Notification sent to Company: " + message);
     }
 
-	
+    public void sendNotificationClient(String email, String message) {
+        System.out.println("Email sent to Client (" + email + "): " + message);
+    }
 }
